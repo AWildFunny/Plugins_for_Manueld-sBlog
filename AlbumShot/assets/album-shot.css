@@ -1,0 +1,76 @@
+/* AlbumShot — standalone figure (album page layouts live in theme music-album.css) */
+.album-shot {
+    margin: 0 0 1rem;
+    padding: 0;
+    border: none;
+}
+
+.album-shot a {
+    display: block;
+    line-height: 0;
+}
+
+.album-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.album-shot figcaption {
+    margin: 0.4rem 0 0;
+    font-size: 0.85rem;
+    color: var(--muted-color, #667);
+}
+
+.album-board {
+    position: relative;
+    width: 100%;
+    margin: 0 0 1rem;
+}
+
+.album-board-stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--board-ratio, 3 / 2);
+    overflow: hidden;
+    container-type: inline-size;
+}
+
+.album-board-text {
+    position: absolute !important;
+    z-index: 3;
+    margin: 0 !important;
+    box-sizing: border-box;
+    pointer-events: none;
+    font-size: 18px;
+}
+
+.album-board-item {
+    position: absolute !important;
+    display: block;
+    margin: 0 !important;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+.album-board-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+}
+
+.album-board-item img,
+.post-content .album-board-item img,
+.album-board-item.is-crop img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover;
+    object-position: var(--ox, 50%) var(--oy, 50%);
+    transform: scale(var(--zoom, 1));
+    transform-origin: var(--ox, 50%) var(--oy, 50%);
+}

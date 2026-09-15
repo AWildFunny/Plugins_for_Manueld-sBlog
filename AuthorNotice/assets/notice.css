@@ -1,0 +1,119 @@
+/**
+ * Author notice block
+ */
+.an-notice {
+    --an-bg: var(--primary, #1095c1);
+    --an-fg: #fff;
+    --an-radius: 12px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 1.5rem 0;
+    padding: 1.15rem 1.35rem;
+    background: var(--an-bg);
+    color: var(--an-fg);
+    border-radius: var(--an-radius);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+    font-family: var(--font-family, 'Noto Serif SC', serif);
+    line-height: 1.65;
+}
+
+.an-notice--flat {
+    box-shadow: none;
+}
+
+.an-notice-title {
+    margin: 0 0 0.35em;
+    padding: 0;
+    font-size: 1.05em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.35;
+}
+
+.an-notice-body {
+    font-size: 0.95em;
+}
+
+.an-notice-body,
+.an-notice-body p,
+.an-notice-body li,
+.an-notice-body a {
+    color: inherit;
+}
+
+.an-notice .an-notice-body > :first-child {
+    margin-top: 0 !important;
+}
+
+.an-notice .an-notice-body p {
+    margin: 0 0 0.55em !important;
+}
+
+.an-notice .an-notice-body p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.an-notice .an-notice-body p:empty {
+    display: none !important;
+    margin: 0 !important;
+}
+
+.an-notice-body a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.an-notice-body a:hover {
+    opacity: 0.9;
+}
+
+.an-notice-body ul,
+.an-notice-body ol {
+    margin: 0.25em 0 0.55em 1.2em !important;
+    padding: 0;
+    color: inherit;
+}
+
+.an-notice-body li {
+    margin: 0 0 0.2em;
+}
+
+.an-notice-body li::marker {
+    color: inherit;
+}
+
+/* 兼容旧 ArticleComponents 渲染的 class */
+.ac-notice {
+    --ac-bg: var(--primary, #1095c1);
+    --ac-fg: #fff;
+    --ac-radius: 12px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 1.5rem 0;
+    padding: 1.15rem 1.35rem;
+    background: var(--ac-bg);
+    color: var(--ac-fg);
+    border-radius: var(--ac-radius);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+    font-family: var(--font-family, 'Noto Serif SC', serif);
+    line-height: 1.65;
+}
+
+.ac-notice--flat { box-shadow: none; }
+.ac-notice-title { margin: 0 0 0.35em; font-weight: 700; line-height: 1.35; }
+.ac-notice-body, .ac-notice-body p, .ac-notice-body li, .ac-notice-body a { color: inherit; }
+.ac-notice .ac-notice-body > :first-child { margin-top: 0 !important; }
+.ac-notice .ac-notice-body p { margin: 0 0 0.55em !important; }
+.ac-notice .ac-notice-body p:last-child { margin-bottom: 0 !important; }
+.ac-notice .ac-notice-body p:empty { display: none !important; }
+.ac-notice-body a { text-decoration: underline; text-underline-offset: 2px; }
+
+@media (max-width: 576px) {
+    .an-notice,
+    .ac-notice {
+        padding: 1rem 1.1rem;
+        border-radius: calc(var(--an-radius, var(--ac-radius, 12px)) * 0.85);
+    }
+}

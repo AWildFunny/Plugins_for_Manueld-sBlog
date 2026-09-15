@@ -1,0 +1,96 @@
+/* CustomMusicPlayer admin inserter modal */
+.cmp-modal[hidden] {
+    display: none !important;
+}
+
+.cmp-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10050;
+}
+
+.cmp-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.cmp-modal-dialog {
+    position: relative;
+    z-index: 1;
+    width: min(480px, calc(100vw - 32px));
+    max-height: calc(100vh - 48px);
+    margin: 24px auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+.cmp-modal-header,
+.cmp-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    border-bottom: 1px solid #e9e9e6;
+}
+
+.cmp-modal-footer {
+    border-bottom: none;
+    border-top: 1px solid #e9e9e6;
+    justify-content: flex-end;
+}
+
+.cmp-modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cmp-modal-close {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    color: #666;
+}
+
+.cmp-modal-body {
+    padding: 14px 18px;
+}
+
+.cmp-modal-body p {
+    margin: 0 0 12px;
+}
+
+.cmp-modal-body label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.cmp-modal-body select {
+    margin-top: 6px;
+}
+
+.cmp-req {
+    color: #c62828;
+}
+
+.cmp-check label {
+    font-weight: normal;
+}
+
+.custom-music-player-admin-option .description {
+    margin-top: 6px;
+}
+
+.cmp-panel[hidden] {
+    display: none !important;
+}
+
+#cmp-resolve-status {
+    color: #666;
+}
