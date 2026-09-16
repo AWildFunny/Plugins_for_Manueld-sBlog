@@ -23,11 +23,15 @@
 - Typecho 1.2（插件声明 `@dependence 9.9.2-*`）
 - PHP 7.4 或 8.x（本站在 8.x 下使用）
 
-短代码在任意主题下都能解析。写文章时的可视化「组件插入」面板来自主题 [Daydream](https://github.com/AWildFunny/Manueld.me/tree/main/usr/themes/Daydream)（`include/ComponentInserter/`），**不是**本仓库里的插件。没有 Daydream 时：
+短代码在任意主题下都能解析。
+
+写文章侧栏若出现「组件插入」，那是**当前主题**提供的弹窗壳（本站用的是 Daydream 的 `include/ComponentInserter/`）：只负责打开窗口、列出已注册组件、预览区和「插入」按钮。音乐 / 申明 / 图文 / 贡献图各自的表单、预览和插入逻辑都在本仓库对应插件里，启用哪个插件，列表里就出现谁。
+
+其它主题只要同样提供 `include/ComponentInserter/`（Registry + 壳），这些插件也会挂上去。没有这套壳时：
 
 - 仍可手写短代码
-- **CustomMusicPlayer** 自带侧栏「插入音乐播放器」入口
-- 其余三个插件的后台面板不会出现
+- **CustomMusicPlayer** 会显示自己的侧栏「插入音乐播放器」
+- AuthorNotice、AlbumShot、ContributionGraph 没有独立后台入口
 
 ## 安装
 
@@ -67,11 +71,11 @@
 
 | 能力 | 在哪 |
 |------|------|
-| 播放器、申明、画布、贡献图的解析与前台样式 | 本仓库各插件 |
-| 写文章「组件插入」弹窗 | Daydream 主题 |
+| 短代码解析、前台样式、各组件的后台表单 | 本仓库各插件 |
+| 「组件插入」弹窗壳（按钮、列表、预览栏） | 主题里的 `include/ComponentInserter/`（Daydream 已带；其它主题可照同样接口接入） |
 | 「音乐相册」章节目录、章头图 | Daydream 的 `post/music-album.php`，不是插件 |
 
-只用播放器或申明，不必安装相册模板。
+只用播放器或申明，不必安装相册模板。Daydream 源码：[usr/themes/Daydream](https://github.com/AWildFunny/Manueld.me/tree/main/usr/themes/Daydream)。
 
 ## 许可
 
